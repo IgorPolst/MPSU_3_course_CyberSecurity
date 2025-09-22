@@ -11,7 +11,7 @@
 <div class="card">
   <!-- <strong>Плохая проверка на клиенте:</strong> -->
   {% comment %}<button id="toggleBtn" onclick="document.getElementById('badForm').classList.remove('hidden')">Показать форму «Редактировать чужое»</button> {% endcomment %}
-  <form id="badForm" class="hidden" method="post" action="/vuln/{{ my_lists.0.0|cut:'/secure/'|cut:'/list/' }}/update/1/">
+  <form id="badForm" method="post" action="/vuln/{{ my_lists.0.0|cut:'/secure/'|cut:'/list/' }}/update/1/">
     {% csrf_token %}<input name="title" placeholder="Новое значение"><button type="submit">Отправить</button>
   </form>
   <!-- <p class="muted">Console: <code>localStorage.setItem('isAdmin','true'); location.reload()</code></p> -->

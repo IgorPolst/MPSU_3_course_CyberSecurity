@@ -14,11 +14,4 @@
     </tr>
   {% endfor %}
 </table>
-<div class="card">
-  <strong>Плохая проверка: скрытая форма обновления</strong>
-  <form id="editForm" class="hidden" method="post" action="/vuln/fileentry/update/1/">
-    {% csrf_token %}<input name='name' placeholder="Новое значение"><button type="submit">Сохранить</button>
-  </form>
-  <p class="muted">Уберите класс <code>hidden</code> в DevTools — форма станет доступной.</p>
-</div>
 {% endblock %}
